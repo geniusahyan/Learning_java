@@ -1,25 +1,4 @@
 import java.util.*;
-
-// class Student{
-class Student implements Comparable {
-    int rollNo;
-    String name;
-
-    public int compareTo(Object O){
-        Student s = (Student) O;
-        return this.rollNo - s.rollNo;
-        // return name.compareTo(s.name) ;
-    }
-
-    public Student(int r, String n){
-        this.rollNo = r;
-        this.name = n;
-    }
-    public String toString(){
-        return rollNo + "-->" + name + "\n";
-    }
-}
-
 class SortedSet{
     public static void main(String[] args){
 
@@ -62,3 +41,24 @@ class SortedSet{
         
     }
 }
+
+// class Student{
+class Student implements Comparable {
+    int rollNo;
+    String name;
+
+    public int compareTo(Object O){
+        Student s = (Student) O;
+        return this.rollNo - s.rollNo;
+        // return name.compareTo(s.name) ;
+    }
+
+    public Student(int r, String n){
+        this.rollNo = r;
+        this.name = n;
+    }
+    public String toString(){
+        return rollNo + "-->" + name + "\n";
+    }
+}
+
