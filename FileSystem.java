@@ -1,4 +1,5 @@
 import java.io.*;
+/*
 class FileSys{
     public static void main(String[] args){
         File myFile = new File("./README.md");
@@ -21,5 +22,68 @@ class FileSys{
         }catch(Exception e){
             System.out.println(e);
         }
+    }
+} */
+import java.util.*;
+
+
+/*
+class FileListing{
+    public static void main(String[] args) {
+        String dirName = args[0];
+        File dir = new File(dirName);
+
+        if (!dir.isDirectory()) {
+            System.out.println(dir + " is not a directory");
+            return;
+        }
+
+        // for (String f:dir.list()){
+        //     System.out.println(f);
+        // }
+
+        File [] files = dir.listFiles();
+        Date fileDate = new Date();
+
+        for (File a_File:files){
+            fileDate.setTime(a_File.lastModified());
+            String content = a_File.isDirectory()?"<DIR>": " " + a_File.length();
+            System.out.println(fileDate + "\t" + content + "\t" + a_File.getName());
+        }
+    }
+} */
+
+/*
+class FileListing{
+    public static void main(String[] args) {
+        Date osm = new Date();
+        System.out.println(osm);
+    }
+} */
+
+class FileListing{
+    public static void main(String[] args) {
+        FilenameFilter only = new FilterExt("java");
+        File myDir = new File("./");
+
+        if (myDir.isDirectory()) {
+            File[] files = myDir.listFiles(only);
+            for (File a_File:files){
+                System.out.println(a_File.getName());
+            }
+            System.out.println("Total: "+ files.length);
+        }else{
+            System.out.println(myDir + " is not a Directory");
+        }
+    }
+}
+
+class FilterExt implements FilenameFilter{
+    String ext;
+    public FilterExt(String ext){
+        this.ext = ext;
+    }
+    public boolean accept(File dir, String name){
+        return name.endsWith(ext);
     }
 }
