@@ -6,6 +6,12 @@ public class W1ParaLambda {
             return "Hello "+ name;
         };
         System.out.println(s.say("Tom"));
+
+        // omit parameter paranthesis
+        Sayable s2 = name ->{
+            return "Hello "+ name;
+        };
+        System.out.println(s2.say("some"));
     }
 }
 
