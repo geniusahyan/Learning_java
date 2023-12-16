@@ -3,7 +3,7 @@ package Regular_expression;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexD3 {
+public class RegexSTED {
     public static void main(String[] args) {
         int count =0;
         Pattern p = Pattern.compile("L[a-z]*n");

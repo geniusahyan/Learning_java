@@ -3,7 +3,7 @@ package Regular_expression;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class RegexD1{
+class RegexMatch{
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("L[a-zA-Z]*n");
         Matcher matcher = pattern.matcher("LearnVern");
