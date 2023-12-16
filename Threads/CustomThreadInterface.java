@@ -1,3 +1,5 @@
+package Threads;
+
 class CustonThreadInterface implements Runnable{
     Thread t;
     public CustonThreadInterface(String name){

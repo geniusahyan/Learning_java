@@ -1,3 +1,5 @@
+package Threads;
+
 class JoinThread extends Thread{
     int ts;
     public JoinThread(int ts){

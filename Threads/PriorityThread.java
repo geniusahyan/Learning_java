@@ -1,3 +1,5 @@
+package Threads;
+
 class PriorityThread extends Thread{
     public void run(){
         System.out.println("Priority of the Thread " + Thread.currentThread()+ " is: " + getPriority());

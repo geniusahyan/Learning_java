@@ -1,3 +1,5 @@
+package Threads;
+
 // package Threads;
 class CustomThread extends Thread{
     public CustomThread(String name){
