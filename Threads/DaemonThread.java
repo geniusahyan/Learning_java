@@ -1,4 +1,6 @@
-class DaemonThread{
+package Threads;
+
+class DaemonThread extends Thread { 
     public void run(){
         try {
             System.out.println("In run method: "+ Thread.currentThread());
@@ -19,7 +21,7 @@ class DaemonThread{
         System.out.println("Starting main thread");
         /* Create an instance of the daemon thread */
         DaemonThread dt = new DaemonThread();
-        dt.setDaemon(try);
+        dt.setDaemon(true);
         dt.start();
         try {
             Thread.sleep(3000);
